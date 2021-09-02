@@ -2,9 +2,6 @@ export default {
     NODE_ENV: process.env.NODE_ENV
         ? process.env.NODE_ENV
         : 'development',
-    SSL_PASSPHRASE: process.env.SSL_PASSPHRASE
-        ? process.env.SSL_PASSPHRASE
-        : '',
     HOST: process.env.HOST
         ? process.env.HOST
         : '0.0.0.0',

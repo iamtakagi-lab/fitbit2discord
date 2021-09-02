@@ -12,8 +12,7 @@ var key = fs.readFileSync(__dirname + '/certs/server.key');
 var cert = fs.readFileSync(__dirname + '/certs/server.crt');
 var options = {
     key: key,
-    cert: cert,
-    passphrase: env.SSL_PASSPHRASE
+    cert: cert
 };
 
 export default (credential: Credential, fitbit: Fitbit) => {
