@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   fitbit2discord:
-    image: iamtakagi/fitbit2discord
+    image: iamtakagi/fitbit2discord:latest
     environment:
       SSL_PASSPHRASE: xxx
       HOST: 0.0.0.0
