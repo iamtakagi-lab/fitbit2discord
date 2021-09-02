@@ -3,6 +3,7 @@ services:
   fitbit2discord:
     image: iamtakagi/fitbit2discord
     environment:
+      SSL_PASSPHRASE: xxx
       HOST: 0.0.0.0
       PORT: 3000
       # 下記 5行 入力必須

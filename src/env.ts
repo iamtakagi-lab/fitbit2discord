@@ -1,14 +1,17 @@
 export default {
-    NODE_ENV: process.env.NODE_ENV 
+    NODE_ENV: process.env.NODE_ENV
         ? process.env.NODE_ENV
         : 'development',
-    HOST: process.env.HOST 
+    SSL_PASSPHRASE: process.env.SSL_PASSPHRASE
+        ? process.env.SSL_PASSPHRASE
+        : '',
+    HOST: process.env.HOST
         ? process.env.HOST
         : '0.0.0.0',
-    PORT: process.env.PORT 
-        ? Number(process.env.PORT) 
+    PORT: process.env.PORT
+        ? Number(process.env.PORT)
         : '3000',
-    NAME: process.env.NAME 
+    NAME: process.env.NAME
         ? process.env.NAME
         : '',
     BASE_URL: process.env.BASE_URL
@@ -29,4 +32,5 @@ export default {
     NOTIFY_DELAY_SECONDS: process.env.NOTIFY_DELAY_SECONDS
         ? Number(process.env.NOTIFY_DELAY_SECONDS)
         : 300,
+
 }
