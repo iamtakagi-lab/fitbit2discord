@@ -33,7 +33,6 @@ export default class Fitbit {
         return new Promise<number>((resolve) => {
             this.client.get("/activities/heart/date/today/1d/1sec/time/" + timeRanges.minTime + "/" + timeRanges.maxTime + ".json", credential.accessToken).then((results: any) => {
                 console.log("Payload Size: " + jsonMemSize(results));
-                console.log(results)
                 let resultDataset = results[0]["activities-heart-intraday"]["dataset"];
                 let result = resultDataset[resultDataset.length - 1];
                 console.log(result)
