@@ -15,8 +15,8 @@ export default (credential: Credential, fitbit: Fitbit) => {
         .use(router.routes())
 
     https.createServer({
-        key: fs.readFileSync(__dirname + '/certs/server.key'),
-        cert: fs.readFileSync(__dirname + '/certs/server.crt')
+        key: fs.readFileSync('./certs/server.key'),
+        cert: fs.readFileSync('./certs/server.crt')
     }, koa.callback()).listen(env.PORT, () => {
         console.log("Fitbit authorization server started on : " + env.PORT);
     })
