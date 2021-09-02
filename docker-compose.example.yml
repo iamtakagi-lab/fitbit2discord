@@ -21,6 +21,6 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ./certs:/app/dist/certs
-      - ./data:/app/dist/data
+      - ./certs:/app/certs
+      - ./data:/app/data
     restart: unless-stopped
