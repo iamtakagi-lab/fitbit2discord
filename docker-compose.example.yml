@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  fitbit2discord:
+    image: iamtakagi/fitibit2discord
+    environment:
+      HOST: 0.0.0.0
+      PORT: 3000
+      # 下記 5行 入力必須
+      NAME: takagi 
+      BASE_URL: http://localhost:3000
+      FITBIT_REDIRECT_URL: http://localhost:3000/callback
+      FITBIT_CLIENT_ID: xxx
+      FITBIT_CLIENT_SECRET: xxx
+      # カンマで区切ると複数追加可
+      DISCORD_WEBOOK_URLS: https://discord.com/api/webhooks/xxx/xxx
+      # 通知間隔 (秒数)
+      NOTIFY_DELAY_SECONDS: 300
+    ports:
+      - 3000:3000
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
