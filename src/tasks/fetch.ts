@@ -1,7 +1,6 @@
 import Credential from "../credential"
 import Cache from "../cache"
 import env from "../env"
-import notify from "../notifier"
 import fetch from "../fetcher"
 import Fitbit from "../fitbit"
 
