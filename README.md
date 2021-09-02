@@ -1,5 +1,5 @@
 # fitbit2discord
-A minimal service which connects Fitbit to Discord
+A minimal notification service which connects Fitbit to Discord
 
 ## Installation
 ```
