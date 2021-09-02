@@ -1,10 +1,11 @@
-import Discord, { WebhookClient, MessageEmbed } from 'discord.js'
+import { WebhookClient, MessageEmbed } from 'discord.js'
 import Cache from './cache'
+import env from './env'
 
 const makeEmbed = ({ heartrate, miles, calories, floors, sleep }: Cache) => {
     return Promise.resolve(
         new MessageEmbed()
-            .setTitle("takagi - 人体")
+            .setTitle(`${env.NAME} - 人体`)
             .setDescription("現在のアクティビティを表示しています")
             .setThumbnail("https://irishtechnews.ie/wp-content/uploads/2016/08/fitbit-logo.png")
             .addField(":heart: 心拍数", heartrate + "bpm", true)
