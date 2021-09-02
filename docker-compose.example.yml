@@ -14,10 +14,8 @@ services:
       FITBIT_CLIENT_SECRET: xxx
       # カンマで区切ると複数追加可
       DISCORD_WEBOOK_URLS: https://discord.com/api/webhooks/xxx/xxx
-      # 取得間隔 (秒)
-      FETCH_DELAY_SECONDS: 30
       # 通知間隔 (秒)
-      NOTIFY_DELAY_SECONDS: 300
+      NOTIFY_DELAY_SECONDS: 60
     ports:
       - 3000:3000
     volumes:

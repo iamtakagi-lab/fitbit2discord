@@ -15,8 +15,8 @@ export const jsonMemSize = (json: any) => {
 
 export const getTimeRange = () => {
     let currentDate = new Date();
-    let prevHour: number | string = Math.max(currentDate.getHours() - 1, 0);
-    let curHour: number | string = currentDate.getHours();
+    let prevHour: any = Math.max(currentDate.getHours() - 1, 0);
+    let curHour: any = currentDate.getHours();
     if (curHour < 10)
         curHour = "0" + curHour;
     if (prevHour < 10)

@@ -32,19 +32,17 @@ export default class Fitbit {
         let timeRanges = getTimeRange();
         return new Promise<number>((resolve) => {
             this.client.get("/activities/heart/date/today/1d/1sec/time/" + timeRanges.minTime + "/" + timeRanges.maxTime + ".json", credential.accessToken).then((results: any) => {
-                //console.log("Payload Size: " + jsonMemSize(results));
+                console.log("Payload Size: " + jsonMemSize(results));
                 console.log(results[0])
-                //let resultDataset = results[0]["activities-heart-intraday"]["dataset"];
-                //let result = resultDataset[resultDataset.length - 1];
-                //console.log(result)
-                //resolve(parseInt(result["value"]))
+                let resultDataset = results[0]["activities-heart-intraday"]["dataset"];
+                let result = resultDataset[resultDataset.length - 1];
+                resolve(parseInt(result["value"]))
                 console.log(0)
             }).catch((err: any) => {
                 console.log("Failed to fetch dataset: " + err);
                 resolve(0)
             });
         })
-
     }
 
     async getTotalMiles(credential: Credential) {
