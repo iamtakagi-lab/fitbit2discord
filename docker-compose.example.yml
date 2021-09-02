@@ -3,12 +3,13 @@ services:
   fitbit2discord:
     image: iamtakagi/fitbit2discord
     environment:
+      SSL_PASSPHRASE: xxx
       HOST: 0.0.0.0
       PORT: 3000
       # 下記 5行 入力必須
       NAME: takagi 
-      BASE_URL: http://localhost:3000
-      FITBIT_REDIRECT_URL: http://localhost:3000/callback
+      BASE_URL: https://localhost:3000
+      FITBIT_REDIRECT_URL: https://localhost:3000/callback
       FITBIT_CLIENT_ID: xxx
       FITBIT_CLIENT_SECRET: xxx
       # カンマで区切ると複数追加可
@@ -18,5 +19,6 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ./data:/app/data
+      - ./certs:/app/dist/certs
+      - ./data:/app/dist/data
     restart: unless-stopped
