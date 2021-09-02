@@ -7,7 +7,7 @@ nano docker-compose.example.yml
 docker-compose up -d --build
 ```
 
-## Initial Login
+## Initial Authorize
 http://localhost:3000/authorize
 
 [data/credential.json](data/credential.json) にトークンデータが保存されます
