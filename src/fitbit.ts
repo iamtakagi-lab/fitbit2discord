@@ -36,7 +36,7 @@ export default class Fitbit {
                 let resultDataset = results[0]["activities-heart-intraday"]["dataset"];
                 let result = resultDataset[resultDataset.length - 1];
                 console.log(result)
-                resolve(result["value"])
+                resolve(parseInt(result["value"]))
             }).catch((err: any) => {
                 console.log("Failed to fetch dataset: " + err);
                 resolve(0)
