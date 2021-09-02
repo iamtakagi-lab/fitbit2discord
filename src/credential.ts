@@ -7,7 +7,7 @@ export default class Credential {
 
     constructor() {
         const storedCredential = JSON.parse(
-            fs.readFileSync(__dirname + '/data/credential.json', 'utf8')
+            fs.readFileSync('./data/credential.json', 'utf8')
         )
 
         const { accessToken, refreshToken } = storedCredential
@@ -40,6 +40,6 @@ export default class Credential {
     }
 
     save() {
-        fs.writeFileSync(__dirname + '/data/credential.json', JSON.stringify({ accessToken: this.accessToken, refreshToken: this.refreshToken }))
+        fs.writeFileSync('./data/credential.json', JSON.stringify({ accessToken: this.accessToken, refreshToken: this.refreshToken }))
     }
 }
