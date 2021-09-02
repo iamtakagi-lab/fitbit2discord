@@ -8,7 +8,7 @@ docker-compose up -d --build
 ```
 
 ## Initial Authorize
-http://localhost:3000/authorize
+https://localhost:3000/authorize
 
 [data/credential.json](data/credential.json) にトークンデータが保存されます
 
