@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   fitbit2discord:
-    image: iamtakagi/fitibit2discord
+    image: iamtakagi/fitbit2discord
     environment:
       HOST: 0.0.0.0
       PORT: 3000
