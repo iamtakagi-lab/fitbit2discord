@@ -31,7 +31,7 @@ export default class Fitbit {
     async getLastHeartRate(credential: Credential) {
         let timeRanges = getTimeRange();
         return new Promise<number>((resolve) => {
-            this.client.get("/activities/heart/date/today/1d/1sec/time/" + timeRanges.minTime + "/" + timeRanges.maxTime + ".json", credential.accessToken).then((results: any) => {
+            this.client.get("/activities/heart/date/today/1d/1sec/time/" + timeRanges.minTime + "/" + timeRanges.maxTime + ".json", credential.accessToken).then(results => {
                 console.log("Payload Size: " + jsonMemSize(results));
                 let resultDataset = results[0]["activities-heart-intraday"]["dataset"];
                 let result = resultDataset[resultDataset.length - 1];
