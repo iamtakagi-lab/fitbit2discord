@@ -6,6 +6,7 @@ on:
       - .gitignore
       - LICENSE
       - '**.md'
+      - docker-compose.example.yml
     branches-ignore:
       - 'releases/**'
 
