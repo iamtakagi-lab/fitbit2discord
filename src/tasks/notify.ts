@@ -14,14 +14,13 @@ export default (credential: Credential, cache: Cache, fitbit: Fitbit) => {
             credential.refreshToken.length <= 0
         ) return
 
-        fetch(credential, cache, fitbit).then(() => {
-            env.DISCORD_WEBOOK_URLS.split(',').map(async (url) => {
-                const splitUrl = url.split('/')
-                const id = splitUrl[5]
-                const token = splitUrl[6]
-                await notify({ id, token }, cache)
-            })
+        env.DISCORD_WEBOOK_URLS.split(',').map(async (url) => {
+            const splitUrl = url.split('/')
+            const id = splitUrl[5]
+            const token = splitUrl[6]
+            await notify({ id, token }, cache)
         })
+
     }, env.NOTIFY_DELAY_SECONDS * 1000)
 
 }

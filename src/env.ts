@@ -26,6 +26,9 @@ export default {
     DISCORD_WEBOOK_URLS: process.env.DISCORD_WEBOOK_URLS
         ? process.env.DISCORD_WEBOOK_URLS
         : '',
+    FETCH_DELAY_SECONDS: process.env.FETCH_DELAY_SECONDS
+        ? Number(process.env.FETCH_DELAY_SECONDS)
+        : 30,
     NOTIFY_DELAY_SECONDS: process.env.NOTIFY_DELAY_SECONDS
         ? Number(process.env.NOTIFY_DELAY_SECONDS)
         : 300,
