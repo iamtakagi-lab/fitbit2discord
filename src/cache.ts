@@ -1,7 +1,7 @@
 export default class Cache {
-    heartrate: number = 0
-    miles: number = 0
-    calories: number = 0
-    floors: number = 0
+    heartrate: string = "0 bpm"
+    miles: string = "0 mi"
+    calories: string = "0 kcal"
+    floors: string = "0 階"
     sleep: string = "0時間 0分"
 }
