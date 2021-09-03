@@ -139,7 +139,7 @@ export default class Fitbit {
 
                 let remainingMinutesYest = yestMinAsleepDiff % 60;
 
-                let sign = (yestMinAsleepDiff > 0 ? "\u2795" : "\u2796");
+                let sign = (yestMinAsleepDiff > 0 ? "+" : "-");
                 if (yestMinAsleep > 60)
                     timeStr += " (" + sign + hoursSleptYest.toString().replace("-", "") + "時間 " + remainingMinutesYest.toString().replace("-", "") + "分" + ")";
                 else
