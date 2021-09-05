@@ -1,12 +1,13 @@
 import { WebhookClient, MessageEmbed } from 'discord.js'
 import Cache from './cache'
+import { FITBIT_THUMBNAIL_URL } from './constants'
 import env from './env'
 
 const makeEmbed = ({ heartrate, miles, calories, floors, sleep }: Cache) => {
     const embed = new MessageEmbed()
             .setTitle(`${env.NAME} - 人体`)
             .setDescription("現在のアクティビティを表示しています")
-            .setThumbnail("https://i.imgur.com/OZ2w8gQ.png")
+            .setThumbnail(FITBIT_THUMBNAIL_URL)
             .addField(":heart: 心拍数", heartrate, true)
             .addField(":fire: 消費済みカロリー", calories, true)
             .addField(":athletic_shoe: 歩いた距離", miles, true)
