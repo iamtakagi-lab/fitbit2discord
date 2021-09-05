@@ -8,6 +8,7 @@ services:
       PORT: 3000
       # 下記 5行 入力必須
       NAME: takagi 
+      WEBSITE_URL: https://fitbit.iamtakagi.net
       BASE_URL: https://localhost:3000
       FITBIT_REDIRECT_URL: https://localhost:3000/callback
       FITBIT_CLIENT_ID: xxx
