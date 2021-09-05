@@ -7,7 +7,7 @@ const makeEmbed = ({ heartrate, miles, calories, floors, sleep }: Cache) => {
         new MessageEmbed()
             .setTitle(`${env.NAME} - 人体`)
             .setDescription("現在のアクティビティを表示しています")
-            .setThumbnail("https://irishtechnews.ie/wp-content/uploads/2016/08/fitbit-logo.png")
+            .setThumbnail("https://i.imgur.com/OZ2w8gQ.png")
             .addField(":heart: 心拍数", heartrate, true)
             .addField(":fire: 消費済みカロリー", calories, true)
             .addField(":athletic_shoe: 歩いた距離", miles, true)
