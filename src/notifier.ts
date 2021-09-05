@@ -3,8 +3,7 @@ import Cache from './cache'
 import env from './env'
 
 const makeEmbed = ({ heartrate, miles, calories, floors, sleep }: Cache) => {
-    return Promise.resolve(
-        new MessageEmbed()
+    const embed = new MessageEmbed()
             .setTitle(`${env.NAME} - 人体`)
             .setDescription("現在のアクティビティを表示しています")
             .setThumbnail("https://i.imgur.com/OZ2w8gQ.png")
@@ -13,6 +12,13 @@ const makeEmbed = ({ heartrate, miles, calories, floors, sleep }: Cache) => {
             .addField(":athletic_shoe: 歩いた距離", miles, true)
             .addField(":triangular_ruler: 歩いた階数", floors, true)
             .addField(":zzz: 睡眠時間", sleep, true)
+
+    if (env.WEBSITE_URL != null && env.WEBSITE_URL.length > 0) {
+        embed.setURL(`${env.WEBSITE_URL}`)
+    }
+
+    return Promise.resolve(
+        embed 
     )
 }
 
