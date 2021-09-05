@@ -6,9 +6,9 @@ services:
       TZ: Asia/Tokyo
       HOST: 0.0.0.0
       PORT: 3000
-      # 下記 5行 入力必須
-      NAME: takagi 
       WEBSITE_URL: https://fitbit.iamtakagi.net
+      # 下記 5項目 入力必須
+      NAME: takagi 
       BASE_URL: https://localhost:3000
       FITBIT_REDIRECT_URL: https://localhost:3000/callback
       FITBIT_CLIENT_ID: xxx
