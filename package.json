@@ -1,6 +1,6 @@
 {
   "name": "fitbit2discord",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "author": "iamtakagi",
   "dependencies": {
     "discord.js": "^13.1.0",
