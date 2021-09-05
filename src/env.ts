@@ -11,6 +11,9 @@ export default {
     NAME: process.env.NAME
         ? process.env.NAME
         : '',
+    WEBSITE_URL: process.env.WEBSITE_URL
+        ? process.env.WEBSITE_URL
+        : '',
     BASE_URL: process.env.BASE_URL
         ? process.env.BASE_URL
         : '',
